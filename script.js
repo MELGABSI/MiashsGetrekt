@@ -7,7 +7,7 @@ function append(parent,el)
 	return parent.appendChild(el);
 }
 
-const ul= document.getElementById("random-quotes");
+const ul= document.getElementById("random_quotes");
 
 
 fetch("https://andruxnet-random-famous-quotes.p.mashape.com/?cat=movies&count=10", {
@@ -20,11 +20,11 @@ fetch("https://andruxnet-random-famous-quotes.p.mashape.com/?cat=movies&count=10
 })
 .then((resp)=>resp.json())
 .then(function(data){
-	let authors = data;
+	let random_quotes = data;
 	for (var i = 0; i < data.length; i++) {
 	let li= createNode('li'), 
 	span = createNode('h2');
-	span.innerHTML = authors[i].quote;
+	span.innerHTML = random_quotes[i].quote;
 	append(li,span);
 	append(ul,li);
 	
