@@ -7,9 +7,8 @@ function append(parent,el)
 	return parent.appendChild(el);
 }
 
-const ul= document.getElementById("authors");
+const ul= document.getElementById("random-quotes");
 
-const url='https://randomuser.me/api/?results=10';
 
 fetch("https://andruxnet-random-famous-quotes.p.mashape.com/?cat=movies&count=10", {
   headers: {
